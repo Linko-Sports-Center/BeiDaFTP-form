@@ -359,9 +359,8 @@
         // 寫入會員到 Direbase     
         var res = await callAPI(paramToSend, '寫入資料');
 
-        if (res == "API:01 會員寫入成功") {
+        if (res == "API:01 會員寫入成功" || "API:01 會員已存在") {
           alert("資料新增成功，請關閉視窗，回到 LINE 選單")
-          // 顯示團課表格
           console.log("資料新增成功，請關閉視窗，會到 LINE 選單");
           return true;
 
